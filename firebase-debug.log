@@ -1,0 +1,136 @@
+[debug] [2023-07-23T00:17:32.939Z] ----------------------------------------------------------------------
+[debug] [2023-07-23T00:17:32.940Z] Command:       /Users/albertom/.nvm/versions/node/v16.19.0/bin/node /Users/albertom/.nvm/versions/node/v16.19.0/bin/firebase deploy
+[debug] [2023-07-23T00:17:32.941Z] CLI Version:   12.4.5
+[debug] [2023-07-23T00:17:32.941Z] Platform:      darwin
+[debug] [2023-07-23T00:17:32.941Z] Node Version:  v16.19.0
+[debug] [2023-07-23T00:17:32.942Z] Time:          Sat Jul 22 2023 17:17:32 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-07-23T00:17:32.942Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-23T00:17:32.980Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-23T00:17:32.981Z] > authorizing via signed-in user (alberto.montagnese@gmail.com)
+[debug] [2023-07-23T00:17:32.981Z] [iam] checking project whisperingapp for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2023-07-23T00:17:32.982Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/whisperingapp:testIamPermissions [none]
+[debug] [2023-07-23T00:17:32.982Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/whisperingapp:testIamPermissions x-goog-quota-user=projects/whisperingapp
+[debug] [2023-07-23T00:17:32.982Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/whisperingapp:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-07-23T00:17:33.227Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/whisperingapp:testIamPermissions 200
+[debug] [2023-07-23T00:17:33.227Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/whisperingapp:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-07-23T00:17:33.228Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/whisperingapp/serviceAccounts/whisperingapp@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-07-23T00:17:33.228Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/whisperingapp/serviceAccounts/whisperingapp@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-07-23T00:17:33.401Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/whisperingapp/serviceAccounts/whisperingapp@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-07-23T00:17:33.401Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/whisperingapp/serviceAccounts/whisperingapp@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-07-23T00:17:33.403Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/whisperingapp [none]
+[debug] [2023-07-23T00:17:33.894Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/whisperingapp 200
+[debug] [2023-07-23T00:17:33.894Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/whisperingapp {"projectId":"whisperingapp","projectNumber":"270392577249","displayName":"whisperingapp","name":"projects/whisperingapp","resources":{"hostingSite":"whisperingapp","storageBucket":"whisperingapp.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_769d45a6-d90d-4c9b-af0d-b4bd15365c71"}
+[debug] [2023-07-23T00:17:35.322Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/whisperingapp/sites pageToken=&pageSize=10
+[debug] [2023-07-23T00:17:35.793Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/whisperingapp/sites 200
+[debug] [2023-07-23T00:17:35.794Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/whisperingapp/sites {"sites":[{"name":"projects/whisperingapp/sites/whisperingapp","defaultUrl":"https://whisperingapp.web.app","appId":"1:270392577249:web:04d9a7af6d4b0206cb3ba0","type":"DEFAULT_SITE"}]}
+[debug] [2023-07-23T00:17:35.795Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:270392577249:web:04d9a7af6d4b0206cb3ba0/config [none]
+[debug] [2023-07-23T00:17:36.430Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:270392577249:web:04d9a7af6d4b0206cb3ba0/config 200
+[debug] [2023-07-23T00:17:36.431Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:270392577249:web:04d9a7af6d4b0206cb3ba0/config {"projectId":"whisperingapp","appId":"1:270392577249:web:04d9a7af6d4b0206cb3ba0","storageBucket":"whisperingapp.appspot.com","locationId":"us-central","apiKey":"AIzaSyDg2hZ-DExa__aErxRMDdpGC7Po05xthZo","authDomain":"whisperingapp.firebaseapp.com","messagingSenderId":"270392577249","measurementId":"G-VJLMH12YET"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] info  - Loaded env from /Users/albertom/Desktop/misc/twitter-clone/.env.production
+
+[info] info  - SWC minify release candidate enabled. https://nextjs.link/swcmin
+
+[info] info  - Linting and checking validity of types...
+
+[info] info  - Creating an optimized production build...
+
+[info] Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+
+[info] Browserslist: caniuse-lite is outdated. Please run:
+  npx update-browserslist-db@latest
+  Why you should do it regularly: https://github.com/browserslist/update-db#readme
+
+[info] info  - Compiled successfully
+
+[info] info  - Collecting page data...
+
+[info] node:internal/process/promises:279
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+Error: Firebase config is not set or incomplete
+    at getFirebaseConfig (/Users/albertom/Desktop/misc/twitter-clone/.next/server/chunks/108.js:252:60)
+    at /Users/albertom/Desktop/misc/twitter-clone/.next/server/chunks/108.js:188:128 {
+  type: 'Error'
+}
+
+[debug] [2023-07-23T00:17:57.505Z] Error: ENOENT: no such file or directory, open '/Users/albertom/Desktop/misc/twitter-clone/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2023-07-23T00:18:52.023Z] ----------------------------------------------------------------------
+[debug] [2023-07-23T00:18:52.024Z] Command:       /Users/albertom/.nvm/versions/node/v16.19.0/bin/node /Users/albertom/.nvm/versions/node/v16.19.0/bin/firebase deploy
+[debug] [2023-07-23T00:18:52.024Z] CLI Version:   12.4.5
+[debug] [2023-07-23T00:18:52.024Z] Platform:      darwin
+[debug] [2023-07-23T00:18:52.024Z] Node Version:  v16.19.0
+[debug] [2023-07-23T00:18:52.027Z] Time:          Sat Jul 22 2023 17:18:52 GMT-0700 (Pacific Daylight Time)
+[debug] [2023-07-23T00:18:52.027Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-07-23T00:18:52.066Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-07-23T00:18:52.067Z] > authorizing via signed-in user (alberto.montagnese@gmail.com)
+[debug] [2023-07-23T00:18:52.067Z] [iam] checking project whisperingapp for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]
+[debug] [2023-07-23T00:18:52.068Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/whisperingapp:testIamPermissions [none]
+[debug] [2023-07-23T00:18:52.068Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/whisperingapp:testIamPermissions x-goog-quota-user=projects/whisperingapp
+[debug] [2023-07-23T00:18:52.068Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/whisperingapp:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-07-23T00:18:52.256Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/whisperingapp:testIamPermissions 200
+[debug] [2023-07-23T00:18:52.257Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/whisperingapp:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","datastore.indexes.create","datastore.indexes.delete","datastore.indexes.list","datastore.indexes.update","firebase.projects.get","firebasehosting.sites.update","firebaserules.releases.create","firebaserules.releases.update","firebaserules.rulesets.create"]}
+[debug] [2023-07-23T00:18:52.257Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/whisperingapp/serviceAccounts/whisperingapp@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2023-07-23T00:18:52.257Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/whisperingapp/serviceAccounts/whisperingapp@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-07-23T00:18:52.349Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/whisperingapp/serviceAccounts/whisperingapp@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2023-07-23T00:18:52.349Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/whisperingapp/serviceAccounts/whisperingapp@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2023-07-23T00:18:52.350Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/whisperingapp [none]
+[debug] [2023-07-23T00:18:52.669Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/whisperingapp 200
+[debug] [2023-07-23T00:18:52.669Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/whisperingapp {"projectId":"whisperingapp","projectNumber":"270392577249","displayName":"whisperingapp","name":"projects/whisperingapp","resources":{"hostingSite":"whisperingapp","storageBucket":"whisperingapp.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_769d45a6-d90d-4c9b-af0d-b4bd15365c71"}
+[debug] [2023-07-23T00:18:54.101Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/whisperingapp/sites pageToken=&pageSize=10
+[debug] [2023-07-23T00:18:54.621Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/whisperingapp/sites 200
+[debug] [2023-07-23T00:18:54.622Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/whisperingapp/sites {"sites":[{"name":"projects/whisperingapp/sites/whisperingapp","defaultUrl":"https://whisperingapp.web.app","appId":"1:270392577249:web:04d9a7af6d4b0206cb3ba0","type":"DEFAULT_SITE"}]}
+[debug] [2023-07-23T00:18:54.623Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:270392577249:web:04d9a7af6d4b0206cb3ba0/config [none]
+[debug] [2023-07-23T00:18:55.236Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:270392577249:web:04d9a7af6d4b0206cb3ba0/config 200
+[debug] [2023-07-23T00:18:55.236Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/-/webApps/1:270392577249:web:04d9a7af6d4b0206cb3ba0/config {"projectId":"whisperingapp","appId":"1:270392577249:web:04d9a7af6d4b0206cb3ba0","storageBucket":"whisperingapp.appspot.com","locationId":"us-central","apiKey":"AIzaSyDg2hZ-DExa__aErxRMDdpGC7Po05xthZo","authDomain":"whisperingapp.firebaseapp.com","messagingSenderId":"270392577249","measurementId":"G-VJLMH12YET"}
+[info] 
+   Thank you for trying our early preview of Next.js support on Firebase Hosting.
+   During the preview, support is best-effort and breaking changes can be expected. Proceed with caution.
+
+   Documentation: https://firebase.google.com/docs/hosting/frameworks/nextjs
+   File a bug: https://github.com/firebase/firebase-tools/issues/new?template=bug_report.md
+   Submit a feature request: https://github.com/firebase/firebase-tools/issues/new?template=feature_request.md
+
+   We'd love to learn from you. Express your interest in helping us shape the future of Firebase Hosting: https://goo.gle/41enW5X
+
+[info] info  - Loaded env from /Users/albertom/Desktop/misc/twitter-clone/.env.production
+
+[info] info  - SWC minify release candidate enabled. https://nextjs.link/swcmin
+
+[info] info  - Linting and checking validity of types...
+
+[info] info  - Creating an optimized production build...
+
+[info] info  - Compiled successfully
+
+[info] info  - Collecting page data...
+
+[info] node:internal/process/promises:279
+            triggerUncaughtException(err, true /* fromPromise */);
+            ^
+
+Error: Firebase config is not set or incomplete
+    at getFirebaseConfig (/Users/albertom/Desktop/misc/twitter-clone/.next/server/chunks/108.js:252:60)
+    at /Users/albertom/Desktop/misc/twitter-clone/.next/server/chunks/108.js:188:128 {
+  type: 'Error'
+}
+
+[debug] [2023-07-23T00:19:09.635Z] Error: ENOENT: no such file or directory, open '/Users/albertom/Desktop/misc/twitter-clone/.next/export-marker.json'
+[error] 
+[error] Error: An unexpected error has occurred.
