@@ -8,7 +8,7 @@ export function LoginMain(): JSX.Element {
 
   return (
     <main className='grid lg:grid-cols-[1fr,45vw]'>
-      <div className='relative hidden items-center justify-center  lg:flex'>
+      <div className='relative  items-center justify-center  lg:flex'>
         <NextImage
           imgClassName='object-cover'
           blurClassName='bg-accent-blue'
@@ -21,7 +21,7 @@ export function LoginMain(): JSX.Element {
           <CustomIcon className='h-96 w-96 text-white' iconName='SpinnerIcon' />
         </i> */}
       </div>
-      <div className='flex flex-col items-center justify-between gap-6 p-8 lg:items-start lg:justify-center'>
+      <div className='justify-betwee flex flex-col items-center gap-6 p-8 lg:items-start lg:justify-center'>
         {/* <i className='mb-0 self-center lg:mb-10 lg:self-auto'>
           <CustomIcon
             className='-mt-4 h-6 w-6 text-accent-blue lg:h-12 lg:w-12 dark:lg:text-twitter-icon'
@@ -30,7 +30,7 @@ export function LoginMain(): JSX.Element {
         </i> */}
         <div className='flex max-w-xs flex-col gap-4 font-twitter-chirp-extended lg:max-w-none lg:gap-16'>
           <h1
-            className='text-3xl before:content-["See_what’s_happening_in_the_world_right_now."] 
+            className='text-3xl before:content-["Join_Whisper_now"] 
                        lg:text-6xl lg:before:content-[""]'
           />
           <h2 className='hidden text-xl lg:block lg:text-3xl'>
