@@ -28,7 +28,7 @@ export function AsideFooter(): JSX.Element {
           </a>
         ))}
       </nav>
-      <p>© 2022 Whisper, Inc.</p>
+      <p>© 2023 Whisper, Inc.</p>
     </footer>
   );
 }

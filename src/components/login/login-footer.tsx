@@ -35,7 +35,7 @@ export function LoginFooter(): JSX.Element {
             {linkName}
           </a>
         ))}
-        <p>© 2022 Whisper, Inc.</p>
+        <p>© 2023 Whisper, Inc.</p>
       </nav>
     </footer>
   );
