@@ -1,6 +1,8 @@
 const CHARS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
 
 export function getRandomId(): string {
+  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+  // @ts-ignore
   return Array.from({ length: 20 }).reduce(
     (acc: string) => acc + CHARS[~~(Math.random() * CHARS.length)],
     ''
