@@ -265,6 +265,8 @@ function getFirebaseConfig() {
 /* harmony export */ });
 const CHARS = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 function getRandomId() {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     return Array.from({
         length: 20
     }).reduce((acc)=>acc + CHARS[~~(Math.random() * CHARS.length)], "");
