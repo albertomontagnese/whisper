@@ -8,7 +8,7 @@ import { MainLayout } from '@components/layout/main-layout';
 import { SEO } from '@components/common/seo';
 import { UserDataLayout } from '@components/layout/user-data-layout';
 import { UserHomeLayout } from '@components/layout/user-home-layout';
-import { Tweet } from '@components/tweet/tweet';
+import { Whisper } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
 import { StatsEmpty } from '@components/tweet/stats-empty';
 import type { ReactElement, ReactNode } from 'react';
@@ -30,7 +30,7 @@ export default function UserLikes(): JSX.Element {
   return (
     <section>
       <SEO
-        title={`Tweets liked by ${name as string} (@${
+        title={`Whispers liked by ${name as string} (@${
           username as string
         }) / Whisper`}
       />
@@ -38,13 +38,13 @@ export default function UserLikes(): JSX.Element {
         <Loading className='mt-5' />
       ) : !data ? (
         <StatsEmpty
-          title={`@${username as string} hasn't liked any Tweets`}
-          description='When they do, those Tweets will show up here.'
+          title={`@${username as string} hasn't liked any Whispers`}
+          description='When they do, those Whispers will show up here.'
         />
       ) : (
         <AnimatePresence mode='popLayout'>
           {data.map((tweet) => (
-            <Tweet {...tweet} key={tweet.id} />
+            <Whisper {...tweet} key={tweet.id} />
           ))}
         </AnimatePresence>
       )}

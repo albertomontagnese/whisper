@@ -11,7 +11,7 @@ import { UserDataLayout } from '@components/layout/user-data-layout';
 import { UserHomeLayout } from '@components/layout/user-home-layout';
 import { StatsEmpty } from '@components/tweet/stats-empty';
 import { Loading } from '@components/ui/loading';
-import { Tweet } from '@components/tweet/tweet';
+import { Whisper } from '@components/tweet/tweet';
 import type { ReactElement, ReactNode } from 'react';
 
 export default function UserTweets(): JSX.Element {
@@ -54,16 +54,16 @@ export default function UserTweets(): JSX.Element {
         <Loading className='mt-5' />
       ) : !mergedTweets ? (
         <StatsEmpty
-          title={`@${username as string} hasn't tweeted`}
-          description='When they do, their Tweets will show up here.'
+          title={`@${username as string} hasn't whispered`}
+          description='When they do, their Whispers will show up here.'
         />
       ) : (
         <AnimatePresence mode='popLayout'>
           {pinnedData && (
-            <Tweet pinned {...pinnedData} key={`pinned-${pinnedData.id}`} />
+            <Whisper pinned {...pinnedData} key={`pinned-${pinnedData.id}`} />
           )}
           {mergedTweets.map((tweet) => (
-            <Tweet {...tweet} profile={user} key={tweet.id} />
+            <Whisper {...tweet} profile={user} key={tweet.id} />
           ))}
         </AnimatePresence>
       )}

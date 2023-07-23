@@ -17,9 +17,9 @@ import { TweetDate } from '@components/tweet/tweet-date';
 import { Input } from '@components/input/input';
 import type { RefObject } from 'react';
 import type { User } from '@lib/types/user';
-import type { Tweet } from '@lib/types/tweet';
+import type { Whisper } from '@lib/types/tweet';
 
-type ViewTweetProps = Tweet & {
+type ViewTweetProps = Whisper & {
   user: User;
   viewTweetRef?: RefObject<HTMLElement>;
 };

@@ -118,7 +118,7 @@ export function InputForm({
         closeModal={closeModal}
       >
         <ActionModal
-          title='Discard Tweet?'
+          title='Discard Whisper?'
           description='This can’t be undone and you’ll lose your draft.'
           mainBtnClassName='bg-accent-red hover:bg-accent-red/90 active:bg-accent-red/75'
           mainBtnLabel='Discard'
@@ -146,7 +146,7 @@ export function InputForm({
                        placeholder:text-light-secondary dark:placeholder:text-dark-secondary'
             value={inputValue}
             placeholder={
-              reply || replyModal ? 'Tweet your reply' : "What's happening?"
+              reply || replyModal ? 'Whisper your reply' : 'Whisper now...'
             }
             onBlur={handleShowHideNav(true)}
             minRows={loading ? 1 : modal && !isUploadingImages ? 3 : 1}
@@ -168,7 +168,7 @@ export function InputForm({
         </div>
       </div>
       {children}
-      {isVisibilityShown && (
+      {/* {isVisibilityShown && (
         <motion.div
           className='flex border-b border-light-border pb-2 dark:border-dark-border'
           {...fromBottom}
@@ -182,7 +182,7 @@ export function InputForm({
             <p className='font-bold'>Everyone can reply</p>
           </button>
         </motion.div>
-      )}
+      )} */}
     </div>
   );
 }

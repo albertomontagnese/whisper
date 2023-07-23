@@ -6,10 +6,10 @@ import { manageRetweet, manageLike } from '@lib/firebase/utils';
 import { ViewTweetStats } from '@components/view/view-tweet-stats';
 import { TweetOption } from './tweet-option';
 import { TweetShare } from './tweet-share';
-import type { Tweet } from '@lib/types/tweet';
+import type { Whisper } from '@lib/types/tweet';
 
 type TweetStatsProps = Pick<
-  Tweet,
+  Whisper,
   'userLikes' | 'userRetweets' | 'userReplies'
 > & {
   reply?: boolean;
@@ -65,7 +65,7 @@ export function TweetStats({
   );
 
   const tweetIsLiked = userLikes.includes(userId);
-  const tweetIsRetweeted = userRetweets.includes(userId);
+  const tweetIsRewhispered = userRetweets.includes(userId);
 
   const isStatsVisible = !!(totalReplies || totalTweets || totalLikes);
 
@@ -105,17 +105,18 @@ export function TweetStats({
         <TweetOption
           className={cn(
             'hover:text-accent-green focus-visible:text-accent-green',
-            tweetIsRetweeted && 'text-accent-green [&>i>svg]:[stroke-width:2px]'
+            tweetIsRewhispered &&
+              'text-accent-green [&>i>svg]:[stroke-width:2px]'
           )}
           iconClassName='group-hover:bg-accent-green/10 group-active:bg-accent-green/20
                          group-focus-visible:bg-accent-green/10 group-focus-visible:ring-accent-green/80'
-          tip={tweetIsRetweeted ? 'Undo Retweet' : 'Retweet'}
+          tip={tweetIsRewhispered ? 'Undo Retweet' : 'Retweet'}
           move={tweetMove}
           stats={currentTweets}
           iconName='ArrowPathRoundedSquareIcon'
           viewTweet={viewTweet}
           onClick={manageRetweet(
-            tweetIsRetweeted ? 'unretweet' : 'retweet',
+            tweetIsRewhispered ? 'unretweet' : 'retweet',
             userId,
             tweetId
           )}

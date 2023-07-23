@@ -9,7 +9,7 @@ import { MainLayout } from '@components/layout/main-layout';
 import { SEO } from '@components/common/seo';
 import { UserDataLayout } from '@components/layout/user-data-layout';
 import { UserHomeLayout } from '@components/layout/user-home-layout';
-import { Tweet } from '@components/tweet/tweet';
+import { Whisper } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
 import { StatsEmpty } from '@components/tweet/stats-empty';
 import { TweetWithParent } from '@components/tweet/tweet-with-parent';
@@ -41,7 +41,7 @@ export default function UserWithReplies(): JSX.Element {
   return (
     <section>
       <SEO
-        title={`Tweets with replies by ${name as string} (@${
+        title={`Whispers with replies by ${name as string} (@${
           username as string
         }) / Whisper`}
       />
@@ -49,13 +49,13 @@ export default function UserWithReplies(): JSX.Element {
         <Loading className='mt-5' />
       ) : !data ? (
         <StatsEmpty
-          title={`@${username as string} hasn't tweeted`}
-          description='When they do, their Tweets will show up here.'
+          title={`@${username as string} hasn't whispered`}
+          description='When they do, their Whispers will show up here.'
         />
       ) : (
         <AnimatePresence mode='popLayout'>
           {pinnedData && (
-            <Tweet pinned {...pinnedData} key={`pinned-${pinnedData.id}`} />
+            <Whisper pinned {...pinnedData} key={`pinned-${pinnedData.id}`} />
           )}
           <TweetWithParent data={data} />
         </AnimatePresence>

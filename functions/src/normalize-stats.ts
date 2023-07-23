@@ -1,12 +1,12 @@
 import { functions, firestore, regionalFunctions } from './lib/utils';
 import { tweetConverter, bookmarkConverter } from './types';
-import type { Tweet } from './types';
+import type { Whisper } from './types';
 
 export const normalizeStats = regionalFunctions.firestore
   .document('tweets/{tweetId}')
   .onDelete(async (snapshot): Promise<void> => {
     const tweetId = snapshot.id;
-    const tweetData = snapshot.data() as Tweet;
+    const tweetData = snapshot.data() as Whisper;
 
     functions.logger.info(`Normalizing stats from tweet ${tweetId}`);
 

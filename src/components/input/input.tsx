@@ -22,7 +22,7 @@ import type { ReactNode, FormEvent, ChangeEvent, ClipboardEvent } from 'react';
 import type { WithFieldValue } from 'firebase/firestore';
 import type { Variants } from 'framer-motion';
 import type { User } from '@lib/types/user';
-import type { Tweet } from '@lib/types/tweet';
+import type { Whisper } from '@lib/types/tweet';
 import type { FilesWithId, ImagesPreview, ImageData } from '@lib/types/file';
 
 type InputProps = {
@@ -81,7 +81,7 @@ export function Input({
 
     const userId = user?.id as string;
 
-    const tweetData: WithFieldValue<Omit<Tweet, 'id'>> = {
+    const tweetData: WithFieldValue<Omit<Whisper, 'id'>> = {
       text: inputValue.trim() || null,
       parent: isReplying && parent ? parent : null,
       images: await uploadImages(userId, selectedImages),
@@ -114,7 +114,7 @@ export function Input({
     toast.success(
       () => (
         <span className='flex gap-2'>
-          Your Tweet was sent
+          Your Whisper was sent
           <Link href={`/tweet/${tweetId}`}>
             <a className='custom-underline font-bold'>View</a>
           </Link>

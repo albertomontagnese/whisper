@@ -1,14 +1,14 @@
 import { createTransport } from 'nodemailer';
 import { firestore, functions, regionalFunctions } from './lib/utils';
 import { EMAIL_API, EMAIL_API_PASSWORD, TARGET_EMAIL } from './lib/env';
-import type { Tweet, User } from './types';
+import type { Whisper, User } from './types';
 
 export const notifyEmail = regionalFunctions.firestore
   .document('tweets/{tweetId}')
   .onCreate(async (snapshot): Promise<void> => {
     functions.logger.info('Sending notification email.');
 
-    const { text, createdBy, images, parent } = snapshot.data() as Tweet;
+    const { text, createdBy, images, parent } = snapshot.data() as Whisper;
 
     const imagesLength = images?.length ?? 0;
 
@@ -26,13 +26,13 @@ export const notifyEmail = regionalFunctions.firestore
 
     const tweetLink = `https://twitter-clone-ccrsxx.vercel.app/tweet/${snapshot.id}`;
 
-    const emailHeader = `New Tweet${
+    const emailHeader = `New Whisper${
       parent ? ' reply' : ''
     } from ${name} (@${username})`;
 
     const emailText = `${text ?? 'No text provided'}${
       images ? ` (${imagesLength} image${imagesLength > 1 ? 's' : ''})` : ''
-    }\n\nLink to Tweet: ${tweetLink}\n\n- Firebase Function.`;
+    }\n\nLink to Whisper: ${tweetLink}\n\n- Firebase Function.`;
 
     await client.sendMail({
       from: EMAIL_API.value(),

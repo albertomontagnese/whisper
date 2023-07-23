@@ -24,7 +24,7 @@ import { ToolTip } from '@components/ui/tooltip';
 import { HeroIcon } from '@components/ui/hero-icon';
 import { CustomIcon } from '@components/ui/custom-icon';
 import type { Variants } from 'framer-motion';
-import type { Tweet } from '@lib/types/tweet';
+import type { Whisper } from '@lib/types/tweet';
 import type { User } from '@lib/types/user';
 
 export const variants: Variants = {
@@ -37,7 +37,7 @@ export const variants: Variants = {
   exit: { opacity: 0, y: -25, transition: { duration: 0.2 } }
 };
 
-type TweetActionsProps = Pick<Tweet, 'createdBy'> & {
+type TweetActionsProps = Pick<Whisper, 'createdBy'> & {
   isOwner: boolean;
   ownerId: string;
   tweetId: string;
@@ -51,13 +51,13 @@ type PinModalData = Record<'title' | 'description' | 'mainBtnLabel', string>;
 
 const pinModalData: Readonly<PinModalData[]> = [
   {
-    title: 'Pin Tweet to from profile?',
+    title: 'Pin Whisper to from profile?',
     description:
-      'This will appear at the top of your profile and replace any previously pinned Tweet.',
+      'This will appear at the top of your profile and replace any previously pinned Whisper.',
     mainBtnLabel: 'Pin'
   },
   {
-    title: 'Unpin Tweet from profile?',
+    title: 'Unpin Whisper from profile?',
     description:
       'This will no longer appear automatically at the top of your profile.',
     mainBtnLabel: 'Unpin'
@@ -113,7 +113,7 @@ export function TweetActions({
     ]);
 
     toast.success(
-      `${isInAdminControl ? `@${username}'s` : 'Your'} Tweet was deleted`
+      `${isInAdminControl ? `@${username}'s` : 'Your'} Whisper was deleted`
     );
 
     removeCloseModal();
@@ -156,7 +156,7 @@ export function TweetActions({
         closeModal={removeCloseModal}
       >
         <ActionModal
-          title='Delete Tweet?'
+          title='Delete Whisper?'
           description={`This can’t be undone and it will be removed from ${
             isInAdminControl ? `@${username}'s` : 'your'
           } profile, the timeline of any accounts that follow ${

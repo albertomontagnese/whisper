@@ -2,9 +2,9 @@ import Link from 'next/link';
 import cn from 'clsx';
 import { formatDate } from '@lib/date';
 import { ToolTip } from '@components/ui/tooltip';
-import type { Tweet } from '@lib/types/tweet';
+import type { Whisper } from '@lib/types/tweet';
 
-type TweetDateProps = Pick<Tweet, 'createdAt'> & {
+type TweetDateProps = Pick<Whisper, 'createdAt'> & {
   tweetLink: string;
   viewTweet?: boolean;
 };

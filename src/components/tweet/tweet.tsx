@@ -16,10 +16,10 @@ import { TweetStatus } from './tweet-status';
 import { TweetStats } from './tweet-stats';
 import { TweetDate } from './tweet-date';
 import type { Variants } from 'framer-motion';
-import type { Tweet } from '@lib/types/tweet';
+import type { Whisper } from '@lib/types/tweet';
 import type { User } from '@lib/types/user';
 
-export type TweetProps = Tweet & {
+export type TweetProps = Whisper & {
   user: User;
   modal?: boolean;
   pinned?: boolean;
@@ -33,7 +33,7 @@ export const variants: Variants = {
   exit: { opacity: 0, transition: { duration: 0.2 } }
 };
 
-export function Tweet(tweet: TweetProps): JSX.Element {
+export function Whisper(tweet: TweetProps): JSX.Element {
   const {
     id: tweetId,
     text,
@@ -72,7 +72,7 @@ export function Tweet(tweet: TweetProps): JSX.Element {
   } = profile ?? {};
 
   const reply = !!parent;
-  const tweetIsRetweeted = userRetweets.includes(profileId ?? '');
+  const tweetIsRewhispered = userRetweets.includes(profileId ?? '');
 
   return (
     <motion.article
@@ -105,14 +105,14 @@ export function Tweet(tweet: TweetProps): JSX.Element {
             <AnimatePresence initial={false}>
               {modal ? null : pinned ? (
                 <TweetStatus type='pin'>
-                  <p className='text-sm font-bold'>Pinned Tweet</p>
+                  <p className='text-sm font-bold'>Pinned Whisper</p>
                 </TweetStatus>
               ) : (
-                tweetIsRetweeted && (
+                tweetIsRewhispered && (
                   <TweetStatus type='tweet'>
                     <Link href={profileUsername as string}>
                       <a className='custom-underline truncate text-sm font-bold'>
-                        {userId === profileId ? 'You' : profileName} Retweeted
+                        {userId === profileId ? 'You' : profileName} Rewhispered
                       </a>
                     </Link>
                   </TweetStatus>

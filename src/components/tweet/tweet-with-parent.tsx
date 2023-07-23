@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Tweet } from './tweet';
+import { Whisper } from './tweet';
 import { TweetParent } from './tweet-parent';
 import type { TweetWithUser } from '@lib/types/tweet';
 
@@ -34,7 +34,7 @@ export function TweetWithParent({ data }: TweetWithParentProps): JSX.Element {
               addParentId={addParentId}
             />
           )}
-          <Tweet {...tweet} />
+          <Whisper {...tweet} />
         </div>
       ))}
     </>

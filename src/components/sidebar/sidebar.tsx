@@ -94,7 +94,7 @@ export function Sidebar(): JSX.Element {
                            focus-visible:bg-accent-blue/10 focus-visible:!ring-accent-blue/80
                            dark:text-twitter-icon dark:hover:bg-dark-primary/10'
               >
-                <CustomIcon className='h-7 w-7' iconName='TwitterIcon' />
+                {/* <CustomIcon className='h-7 w-7' iconName='TwitterIcon' /> */}
               </a>
             </Link>
           </h1>
@@ -120,7 +120,7 @@ export function Sidebar(): JSX.Element {
               className='block h-6 w-6 xl:hidden'
               iconName='FeatherIcon'
             />
-            <p className='hidden xl:block'>Tweet</p>
+            <p className='hidden xl:block'>Whisper</p>
           </Button>
         </section>
         {!isMobile && <SidebarProfile />}

@@ -3,7 +3,7 @@ import { doc } from 'firebase/firestore';
 import { useDocument } from '@lib/hooks/useDocument';
 import { tweetsCollection } from '@lib/firebase/collections';
 import { getRandomId } from '@lib/random';
-import { Tweet } from './tweet';
+import { Whisper } from './tweet';
 import type { LoadedParents } from './tweet-with-parent';
 
 type TweetParentProps = {
@@ -36,5 +36,5 @@ export function TweetParent({
 
   if (loading || !isParentAlreadyLoaded || !data) return null;
 
-  return <Tweet parentTweet {...data} />;
+  return <Whisper parentTweet {...data} />;
 }

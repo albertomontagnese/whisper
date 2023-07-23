@@ -38,7 +38,7 @@ export function SearchBar(): JSX.Element {
       onSubmit={handleSubmit}
     >
       <label
-        className='group flex items-center justify-between gap-4 rounded-full
+        className='group flex items-center justify-between gap-4 rounded-lg
                    bg-main-search-background px-4 py-2 transition focus-within:bg-main-background
                    focus-within:ring-2 focus-within:ring-main-accent'
       >

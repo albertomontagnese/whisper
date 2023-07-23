@@ -1,5 +1,5 @@
 import { Input } from '@components/input/input';
-import { Tweet } from '@components/tweet/tweet';
+import { Whisper } from '@components/tweet/tweet';
 import type { TweetProps } from '@components/tweet/tweet';
 
 type TweetReplyModalProps = {
@@ -18,7 +18,7 @@ export function TweetReplyModal({
       parent={{ id: tweet.id, username: tweet.user.username }}
       closeModal={closeModal}
     >
-      <Tweet modal parentTweet {...tweet} />
+      <Whisper modal parentTweet {...tweet} />
     </Input>
   );
 }

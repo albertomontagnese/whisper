@@ -10,7 +10,7 @@ import { MainContainer } from '@components/home/main-container';
 import { Input } from '@components/input/input';
 import { UpdateUsername } from '@components/home/update-username';
 import { MainHeader } from '@components/home/main-header';
-import { Tweet } from '@components/tweet/tweet';
+import { Whisper } from '@components/tweet/tweet';
 import { Loading } from '@components/ui/loading';
 import { Error } from '@components/ui/error';
 import type { ReactElement, ReactNode } from 'react';
@@ -44,7 +44,7 @@ export default function Home(): JSX.Element {
           <>
             <AnimatePresence mode='popLayout'>
               {data.map((tweet) => (
-                <Tweet {...tweet} key={tweet.id} />
+                <Whisper {...tweet} key={tweet.id} />
               ))}
             </AnimatePresence>
             <LoadMore />

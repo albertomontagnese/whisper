@@ -37,13 +37,13 @@ export function TweetShare({
         type === 'bookmark'
           ? (): JSX.Element => (
               <span className='flex gap-2'>
-                Tweet added to your Bookmarks
+                Whisper added to your Bookmarks
                 <Link href='/bookmarks'>
                   <a className='custom-underline font-bold'>View</a>
                 </Link>
               </span>
             )
-          : 'Tweet removed from your bookmarks'
+          : 'Whisper removed from your bookmarks'
       );
     };
 
@@ -67,7 +67,7 @@ export function TweetShare({
             )}
           >
             <i
-              className='relative rounded-full p-2 not-italic duration-200 group-hover:bg-accent-blue/10 
+              className='relative rounded-lg p-2 not-italic duration-200 group-hover:bg-accent-blue/10 
                          group-focus-visible:bg-accent-blue/10 group-focus-visible:ring-2 
                          group-focus-visible:ring-accent-blue/80 group-active:bg-accent-blue/20'
             >
@@ -92,7 +92,7 @@ export function TweetShare({
                   onClick={preventBubbling(handleCopy(close))}
                 >
                   <HeroIcon iconName='LinkIcon' />
-                  Copy link to Tweet
+                  Copy link to Whisper
                 </Popover.Button>
                 {!tweetIsBookmarked ? (
                   <Popover.Button
@@ -114,7 +114,7 @@ export function TweetShare({
                     )}
                   >
                     <HeroIcon iconName='BookmarkSlashIcon' />
-                    Remove Tweet from Bookmarks
+                    Remove Whisper from Bookmarks
                   </Popover.Button>
                 )}
               </Popover.Panel>

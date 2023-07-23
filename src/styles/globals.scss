@@ -24,7 +24,8 @@
     --light-sidebar-background: 247 249 249;
 
     --accent-yellow: 255 213 0;
-    --accent-blue: 29 155 240;
+    // --accent-blue: 29 155 240;
+    --accent-blue: 249 26 130;
     --accent-pink: 249 26 130;
     --accent-purple: 120 87 255;
     --accent-orange: 255 122 0;
@@ -49,7 +50,7 @@
   }
 
   .custom-button {
-    @apply hover-animation rounded-full p-3 disabled:cursor-not-allowed disabled:opacity-50;
+    @apply hover-animation rounded-lg p-3 disabled:cursor-not-allowed disabled:opacity-50;
   }
 
   .custom-underline {
@@ -75,7 +76,7 @@
   }
 
   .blur-picture {
-    @apply hover-animation accent-tab rounded-full transition hover:brightness-75 active:brightness-100;
+    @apply hover-animation accent-tab rounded-lg transition hover:brightness-75 active:brightness-100;
   }
 
   .trim-alt {

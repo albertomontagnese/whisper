@@ -64,7 +64,7 @@ export function InputThemeRadio({
       )}
       htmlFor={type}
     >
-      <div className='hover-animation flex h-10 w-10 items-center justify-center rounded-full'>
+      <div className='hover-animation flex h-10 w-10 items-center justify-center rounded-lg'>
         <input
           className='peer absolute h-0 w-0 opacity-0'
           id={type}
@@ -76,7 +76,7 @@ export function InputThemeRadio({
         />
         <i
           className={cn(
-            `flex h-5 w-5 items-center justify-center rounded-full 
+            `flex h-5 w-5 items-center justify-center rounded-lg 
              border-2 border-[#B9CAD3] text-white transition
              duration-200 peer-checked:border-transparent
              peer-checked:bg-main-accent peer-checked:inner:opacity-100`,

@@ -10,7 +10,7 @@ import { HomeLayout, ProtectedLayout } from '@components/layout/common-layout';
 import { MainLayout } from '@components/layout/main-layout';
 import { MainContainer } from '@components/home/main-container';
 import { MainHeader } from '@components/home/main-header';
-import { Tweet } from '@components/tweet/tweet';
+import { Whisper } from '@components/tweet/tweet';
 import { ViewTweet } from '@components/view/view-tweet';
 import { SEO } from '@components/common/seo';
 import { Loading } from '@components/ui/loading';
@@ -55,7 +55,7 @@ export default function TweetId(): JSX.Element {
     <MainContainer className='!pb-[1280px]'>
       <MainHeader
         useActionButton
-        title={parentId ? 'Thread' : 'Tweet'}
+        title={parentId ? 'Thread' : 'Whisper'}
         action={back}
       />
       <section>
@@ -63,8 +63,8 @@ export default function TweetId(): JSX.Element {
           <Loading className='mt-5' />
         ) : !tweetData ? (
           <>
-            <SEO title='Tweet not found / Whisper' />
-            <Error message='Tweet not found' />
+            <SEO title='Whisper not found / Whisper' />
+            <Error message='Whisper not found' />
           </>
         ) : (
           <>
@@ -82,7 +82,7 @@ export default function TweetId(): JSX.Element {
               ) : (
                 <AnimatePresence mode='popLayout'>
                   {repliesData?.map((tweet) => (
-                    <Tweet {...tweet} key={tweet.id} />
+                    <Whisper {...tweet} key={tweet.id} />
                   ))}
                 </AnimatePresence>
               ))}

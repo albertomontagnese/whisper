@@ -12,7 +12,7 @@ export type ImagesPreview = (ImageData & {
   id: number;
 })[];
 
-export type Tweet = {
+export type Whisper = {
   text: string | null;
   images: ImagesPreview | null;
   parent: { id: string; username: string } | null;
@@ -24,13 +24,13 @@ export type Tweet = {
   userRetweets: string[];
 };
 
-export const tweetConverter: FirestoreDataConverter<Tweet> = {
+export const tweetConverter: FirestoreDataConverter<Whisper> = {
   toFirestore(tweet) {
     return { ...tweet };
   },
   fromFirestore(snapshot) {
     const data = snapshot.data();
 
-    return { ...data } as Tweet;
+    return { ...data } as Whisper;
   }
 };

@@ -16,36 +16,36 @@ type Options = {
 }[];
 
 const options: Readonly<Options> = [
-  {
-    name: 'Media',
-    iconName: 'PhotoIcon',
-    disabled: false
-  },
-  {
-    name: 'GIF',
-    iconName: 'GifIcon',
-    disabled: true
-  },
-  {
-    name: 'Poll',
-    iconName: 'ChartBarIcon',
-    disabled: true
-  },
-  {
-    name: 'Emoji',
-    iconName: 'FaceSmileIcon',
-    disabled: true
-  },
-  {
-    name: 'Schedule',
-    iconName: 'CalendarDaysIcon',
-    disabled: true
-  },
-  {
-    name: 'Location',
-    iconName: 'MapPinIcon',
-    disabled: true
-  }
+  // {
+  //   name: 'Media',
+  //   iconName: 'PhotoIcon',
+  //   disabled: false
+  // },
+  // {
+  //   name: 'GIF',
+  //   iconName: 'GifIcon',
+  //   disabled: true
+  // },
+  // {
+  //   name: 'Poll',
+  //   iconName: 'ChartBarIcon',
+  //   disabled: true
+  // },
+  // {
+  //   name: 'Emoji',
+  //   iconName: 'FaceSmileIcon',
+  //   disabled: true
+  // },
+  // {
+  //   name: 'Schedule',
+  //   iconName: 'CalendarDaysIcon',
+  //   disabled: true
+  // },
+  // {
+  //   name: 'Location',
+  //   iconName: 'MapPinIcon',
+  //   disabled: true
+  // }
 ];
 
 type InputOptionsProps = {
@@ -96,7 +96,7 @@ export function InputOptions({
         />
         {filteredOptions.map(({ name, iconName, disabled }, index) => (
           <Button
-            className='accent-tab accent-bg-tab group relative rounded-full p-2 
+            className='accent-tab accent-bg-tab group relative rounded-lg p-2 
                        hover:bg-main-accent/10 active:bg-main-accent/20'
             onClick={index === 0 ? onClick : undefined}
             disabled={disabled}
@@ -124,7 +124,7 @@ export function InputOptions({
             <>
               <i className='hidden h-8 w-[1px] bg-[#B9CAD3] dark:bg-[#3E4144] xs:block' />
               <Button
-                className='group relative hidden rounded-full border border-light-line-reply p-[1px]
+                className='group relative hidden rounded-lg border border-light-line-reply p-[1px]
                            text-main-accent dark:border-light-secondary xs:block'
                 disabled
               >
@@ -141,7 +141,7 @@ export function InputOptions({
                      enabled:active:bg-main-accent/75'
           disabled={!isValidTweet}
         >
-          {reply ? 'Reply' : 'Tweet'}
+          {reply ? 'Reply' : 'Whisper'}
         </Button>
       </div>
     </motion.div>

@@ -40,7 +40,7 @@ export function TweetOption({
     >
       <i
         className={cn(
-          'relative rounded-full p-2 not-italic group-focus-visible:ring-2',
+          'relative rounded-lg p-2 not-italic group-focus-visible:ring-2',
           iconClassName
         )}
       >

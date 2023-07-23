@@ -1,4 +1,5 @@
 import cn from 'clsx';
+// import WhisperLogoImg from '../../../public/whisper-logo.png';
 
 type IconName = keyof typeof Icons;
 
@@ -19,6 +20,7 @@ const Icons = {
   FeatherIcon,
   SpinnerIcon,
   TriangleIcon
+  // WhisperLogo
 };
 
 export function CustomIcon({
@@ -30,6 +32,15 @@ export function CustomIcon({
   return <Icon className={className ?? 'h-6 w-6'} />;
 }
 
+//  WhisperLogo: React.FC<IconProps> = ({ className }: IconProps) => {
+//   return (
+//     <img
+//       className={cn('fill-current', className)}
+//       src={WhisperLogoImg}
+//       alt='Whisper Logo'
+//     />
+//   );
+// };
 function TwitterIcon({ className }: IconProps): JSX.Element {
   return (
     <svg className={cn('fill-current', className)} viewBox='0 0 24 24'>
