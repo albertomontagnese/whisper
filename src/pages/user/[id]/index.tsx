@@ -53,10 +53,11 @@ export default function UserTweets(): JSX.Element {
       {ownerLoading || peopleLoading ? (
         <Loading className='mt-5' />
       ) : !mergedTweets ? (
-        <StatsEmpty
-          title={`@${username as string} hasn't whispered`}
-          description='When they do, their Whispers will show up here.'
-        />
+        // <StatsEmpty
+        //   title={`@${username as string} hasn't whispered`}
+        //   description='When they do, their Whispers will show up here.'
+        // />
+        <></>
       ) : (
         <AnimatePresence mode='popLayout'>
           {pinnedData && (

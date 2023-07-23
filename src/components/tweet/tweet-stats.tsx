@@ -90,7 +90,7 @@ export function TweetStats({
           viewTweet ? 'justify-around py-2' : 'max-w-md justify-between'
         )}
       >
-        <TweetOption
+        {/* <TweetOption
           className='hover:text-accent-blue focus-visible:text-accent-blue'
           iconClassName='group-hover:bg-accent-blue/10 group-active:bg-accent-blue/20 
                          group-focus-visible:bg-accent-blue/10 group-focus-visible:ring-accent-blue/80'
@@ -101,8 +101,8 @@ export function TweetStats({
           viewTweet={viewTweet}
           onClick={openModal}
           disabled={reply}
-        />
-        <TweetOption
+        /> */}
+        {/* <TweetOption
           className={cn(
             'hover:text-accent-green focus-visible:text-accent-green',
             tweetIsRewhispered &&
@@ -120,7 +120,7 @@ export function TweetStats({
             userId,
             tweetId
           )}
-        />
+        /> */}
         <TweetOption
           className={cn(
             'hover:text-accent-pink focus-visible:text-accent-pink',
